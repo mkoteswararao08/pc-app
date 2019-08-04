@@ -1,0 +1,8 @@
+.card{
+    /* width:18rem;
+    height:18rem; */
+    cursor: pointer;
+}
+.shadow-sm{
+    box-shadow: 0px 0px 60px 5px  rgba(0, 0, 0, 0.4) !important; 
+}

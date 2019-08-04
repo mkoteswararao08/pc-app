@@ -1,0 +1,63 @@
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <!-- Quiz content -->
+      <div class="container">
+        <div class="row justify-content-center m-2 bg-dark text-white">
+          <div class="col align-self-center">
+            <h4 class="p-0 m-2"> QUIZ</h4>
+          </div>
+          <div class="col text-right">
+            <h4 class="p-2 m-2"><countdown #countdown [config]="{leftTime: [quizlength]*60, demand: true}"  (finished)="finishTest()">$!m!:$!s!</countdown></h4>
+          </div>
+          <div><a title="Close" class=" pull-right"><i ng-click="CloseModal('modalLoginForm')" class="close close-quiz pull-right" style="cursor: pointer;" title="close">&times;</i></a></div>
+          <!-- <a title="Close"><i ng-click="CloseModal()" class="close pull-right">&times;</i></a>  -->
+          <!-- <div class="col-12">
+              <div class="progress">
+                  <div class="progress-bar w-75" role="progressbar" aria-valuenow={{i}} aria-valuemin="0" aria-valuemax="{{quizlength}}"></div>
+                </div>
+            
+          </div> -->
+        </div>
+         
+
+        <div class="row justify-content-center m-2 ">
+          <div class="col-12 m-3 pl-4 text-justify font-weight-bold text-uppercase">{{(i+1)}} . {{question}}</div>
+          <div class="col-6 text-justify mt-2 mb-2  " *ngFor="let opt of option">
+            <div class="form-check">
+              <label class="form-check-label "><input type="radio" name="options" class="form-check-label"
+                  (click)="check($event,opt)">
+                {{opt}}
+                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row m-5 justify-content-center">
+
+          <div class="col text-left pl-0"><button class="btn btn-outline-dark " (click)="previous()"
+              *ngIf="i>0"><i class="fas fa-hand-point-left"></i> Previous</button></div>
+
+
+              <div class="col text-center pl-0" *ngIf="showMarks"><span class="score-card">Your Score: <i class="fas fa-hand-point-right"></i> {{marskScored}}</span></div>
+
+
+          <div class="col text-right"> <button class="btn btn-outline-dark " (click)="next()"
+              *ngIf="i<(quizlength-1)">Next <i class="fas fa-hand-point-right"></i></button></div>
+        </div>
+        <div class="row m-5 justify-content-center">
+          <div class="col text-center "> <button class=" btn btn-info-dif btn-md " ng-disabled=all
+              (click)="generatemark()" [disabled]="showMarks" >Submit Test</button> </div>
+        </div>
+      </div>
+      <!-- Quiz content -->
+    </div>
+  </div>
+</div>
+
+<div class="text-right">
+ 
+    <button class="btn btn-info-dif btn-md" type="button" title="Start Quiz"  data-toggle="modal"
+    data-target="#modalLoginForm" (click)="startQuiz()">Quiz Test</button> 
+</div>

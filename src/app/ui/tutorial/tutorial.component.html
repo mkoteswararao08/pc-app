@@ -1,0 +1,32 @@
+<!-- <div>{{courseDetails.courseId}} </div>
+<div>{{courseDetails.name}} </div>
+<div>{{courseDetails.description}} </div>
+<div *ngFor="let topic of courseDetails.topics">
+    <div ><a routerLink="video/{{topic.videoId}}">{{topic.name}}</a> </div>
+</div>
+<div>
+        <router-outlet></router-outlet>
+</div>
+-->
+
+<div class="container ">
+    <div class="row">
+        <div class="col-3">
+
+            <div class="menu justify-content-start">
+                <ul class="pl-0 topics">
+                    <li routerLink="topic/{{topic.topicId}}" routerLinkActive="active current"
+                        *ngFor="let topic of courseDetails.topics" style="cursor: pointer;">
+                        {{topic.name}}
+                    </li>
+                    <li routerLink="interview/{{courseDetails.name}}">Interview Questions</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col mt-5 p-0">
+            <div class="col justify-content-start pl-0">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

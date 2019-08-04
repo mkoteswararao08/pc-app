@@ -1,0 +1,100 @@
+<!-- Top Banner -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark pt-0 pb-0" >
+  <div class="container">
+
+    <ul class="nav navbar-nav justify-content-start">
+      <li class="nav-item m-1">
+        <a class="nav-link pl-0 text-white" href="#" >
+          <i class="fas fa-mobile-alt"></i> +91-8123870076</a>
+      </li>
+      <li class="nav-item m-1  ">
+        <a class="nav-link text-white" href="#" ><i class="far fa-envelope"></i>
+          contactus@pioneercoders.com</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav justify-content-end">
+      <li class="nav-item m-1 ">
+        <a class="nav-link p-0 text-white" href="#" ><i class="fas fa-map-marker-alt"></i> BTM
+          layout 1stage, Near
+          Gangothri Circle</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<!-- Top Banner -->
+<!-- 2nd Navbar -->
+<!-- Header -->
+<nav class="navbar  navbar-expand-sm  sticky-top m-0 bg-white navbar-light shadow-sm">
+  <div class="container">
+    <!-- Brand/logo -->
+    <a class="navbar-brand " href="#">
+      <img src="../../../assets/pc-logo.png" alt="logo" class="img-box d-inline-flex mr-auto" width="50px" />
+      <h2 class="title text-secondary d-inline-flex">PioneerCoders</h2>
+      <div class="tag-line">Path to Code, Platform for coders.</div>
+    </a>
+    <!-- Hamburger Icon -->
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="nav navbar-nav ml-auto">
+        <div class="active-cyan-3 active-cyan-4 mb-4" >
+          <li class="row mr-5">
+            <input type="text" class="form-control" placeholder="Enter exception" [(ngModel)]="searchQuery" (keyup.enter)="handleSearch()"> <i style="margin-left: -10%; margin-top: 5% " class="fas fa-search"></i></li>
+        </div>
+        <li class="nav-item dropdown  position-static">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="color:#DC3545">Video Tutorial
+          </a>
+
+          <!-- MENU DETAILS -->
+          <div class="row">
+            <div class="dropdown-menu col-lg-11  col-lg-10 col-lg-offset-2 col-sm-10 col-sm-offset-2 bg-light shadow-lg p-3 mb-5 bg-white rounded " aria-labelledby="navbarDropdown">
+              <div class="container">
+                <div class="row justify-content-around">
+                  <div *ngFor="let courseGrop of courseGropList">
+                    <div class="col">
+                      <p><strong class="sub-menu-heading">{{courseGrop.key}}</strong></p>
+                      <p>
+                        <a *ngFor="let course of courseGrop.value" routerLink="/course/{{course.courseId}}/topic/1">
+                          {{course.name}}<br>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                           
+                  <!-- <div >
+                    <div class="col">
+                      <p><strong class="sub-menu-heading">Others</strong></p> 
+                       <div class='other'>
+                         <ul>
+                           <li><a href="#">Tersm</a></li>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Contact Us</a></li>
+                         </ul>
+                       </div>
+                    </div>
+                  </div>
+                -->
+
+                  
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </li>
+        <li class="nav-item justify-content-end">
+          <app-signin></app-signin>
+        </li>
+        <li class="nav-item position-static apps">
+            <a routerLink="/apps"> Apps</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="card shadow-sm col-sm" *ngFor="let app of appslist">
+            <img class="img-fluid" routerLink = "/appsdetails/{{app.id}}" src="../../../assets/images/apps_images/{{app.imgUrls[0]}}" alt="farm-ease">
+        </div>
+        <div class="col-sm-1"></div>
+        <!--<div class="card shadow-sm col-sm">
+            <img class="img-fluid mt-3" routerLink = "/farmcard" src="../../../assets/images/Regnant-Portal-App/regnant_logo.webp" alt="farm-ease">
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="card shadow-sm col-sm">
+            <img class="img-fluid" routerLink = '/smartcard' src="../../../assets/images/the smart chits/logo.jpg" alt="farm-ease">
+        </div> -->
+    </div>
+</div>
+<!-- <div class="container mt-5 mb-5">
+    <div class="row">
+            <div class="col-sm-1"></div>
+        <div class="card shadow-sm col-sm">
+            <img class="img-fluid mt-5" src="../../../assets/images/LearnApp/logo.png" alt="farm-ease">
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="card shadow-sm col-sm">
+            <img class="img-fluid mt-3" routerLink = "/farmcard" src="../../../assets/images/Regnant-Portal-App/regnant_logo.webp" alt="farm-ease">
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div> -->

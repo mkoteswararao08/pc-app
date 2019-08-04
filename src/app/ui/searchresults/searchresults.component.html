@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="text-black-50 text-lg-center text-light"><b>Your Search Results</b></div><br>
+    <!-- <div *ngFor="let result of results"> -->
+        <ol *ngFor="let result of results;  let i = index" class="search-results-numbeirng">
+
+            <li class="container"> {{i+1}}. &emsp;{{result.title}}
+                
+                <a href="{{result.link}}" target="_blank">Click here</a>
+            </li>
+        </ol>
+    <!-- </div> -->
+</div>

@@ -1,0 +1,63 @@
+
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 sidebar1">
+
+                <div class="logo">
+                    <img src="{{userData.imgUrl}}" (click)="viewImg(userData.imgUrl)" class="img-responsive center-block  mx-auto d-block"  alt="Logo">
+                </div>
+                <br>
+                <div class="left-navigation">
+                    <ul class="list">
+                        <h5><strong>{{userData.name}}</strong></h5>
+                        <li><a href="#" class="list-a">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>  </li>
+                        <li>
+                                <a href="#" class="list-a">Update Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Playlist<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Courses<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Subscription<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Company<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" class="list-a">Log Out<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+                        </li>
+               
+                    </ul>
+
+                    <br>
+
+                </div>
+            </div>
+         
+            <div class="col-md-10 col-sm-8 main-content">
+                    <div>
+                            <h1>{{userData.id}} </h1> 
+                         </div>
+                         <div>
+                             <h2>{{userData.name}}</h2>
+                         </div>
+                         <div>
+                                 <h3>{{userData.email}}</h3>
+                         </div>
+                         <div >
+                             <img src="{{userData.imgUrl}}"  >
+                         </div>
+            
+            </div>
+
+
+            </div>
+            </div>
+
+      

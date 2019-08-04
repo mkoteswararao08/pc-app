@@ -1,0 +1,14 @@
+li.active{
+    background-color: salmon ;
+    color:white;
+}
+.topics > li{
+    outline: none;
+}
+.topics > :first-child{
+    border-top-left-radius: 10px;
+}
+.topics > :last-child{
+    border-bottom-right-radius: 10px;
+
+}

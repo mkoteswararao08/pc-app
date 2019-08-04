@@ -1,0 +1,17 @@
+.carousel-indicators li{
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50%;
+}
+.farm{
+    font-family: cfont;
+    font-size: 3rem;
+    font-weight: 550;
+    color: #186607;
+}
+.desc{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: green;
+    font-style: italic;
+}

@@ -1,0 +1,32 @@
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe width="680" height="450" [src]="videoId | safe" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr>
+<div class="design-main">
+  <div class="bg-danger design-main-inside"></div>
+  <div class="bg-warning design-main-inside"></div>
+  <div class="bg-success design-main-inside"></div>
+</div>
+<br>
+<div class="container p-0">
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-info-dif btn-md">
+
+        <a href="{{projectURL}}" target="_blank"><i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i>
+          Download Sample Code</a>
+      </button>
+    </div>
+    <div class="col">
+      <quiz></quiz>
+    </div>
+  </div>
+</div>
+<div>
+
+
+</div>
+<div>
+  <online-editor [courseId]="courseId" [sampleCode]="sampleCode"></online-editor>
+</div>

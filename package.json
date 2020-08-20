@@ -21,7 +21,7 @@
     "@angular/router": "^6.1.0",
     "angular-6-social-login-v2": "^1.0.5",
     "angular-webstorage-service": "^1.0.2",
-    "bcrypt": "^3.0.1",
+    "bcrypt": "^5.0.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
